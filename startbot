@@ -1,8 +1,8 @@
 #!/bin/sh
 
-if [ x`whoami` != xpingbot ]; then
-  echo "Run sudo -u pingbot ~pingbot/pyngelyng/startbot"
+if [ x`whoami` != xbitbot ]; then
+  echo "Run sudo -u bitbot ~bitbot/bitbot/startbot"
   exit 1
 fi
 
-exec ~pingbot/pyngelyng/pyngelyng.py --daemon
+exec ~bitbot/bitbot/bitbot.py --daemon

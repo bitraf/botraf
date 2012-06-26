@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 """
+bitbot - from:
 pyngelyng - from:
   UliBot - A Basic Uli-Oriented IRC Bot
   License: GPL 2; share and enjoy!
@@ -19,10 +20,10 @@ import ircbot, rpcgw
 import urllib, sys # XXX
 
 debug = False
-nickname = 'pyngelyng'
-channel = '#ping.uio.no'
-prefix = "http://www.ping.uio.no/~pingbot/cgi-bin/"
-server_host = 'irc.ifi.uio.no'
+nickname = 'bitbot'
+channel = '#bitraf'
+prefix = "http://bitbot.bitraf.no/"
+server_host = 'irc.freenode.net'
 server_port = 6667
 rpcgw_host = 'localhost'
 rpcgw_port = 9042
@@ -90,7 +91,7 @@ def command(sender, nick, text):
      return ['Error'], sender
 
 
-def pyngelyng(host, port, channels, nick=nickname):
+def bitbot(host, port, channels, nick=nickname):
    p = ircbot.Bot(nick=nick, channels=channels)
 
    def f_command(m, origin, (cmd, channel), text, p=p):
@@ -118,7 +119,7 @@ def main():
       ircbot.setDebug(True)
    
    while 1:
-	   pyngelyng(server_host, server_port, [channel])
+	   bitbot(server_host, server_port, [channel])
 
 if __name__=='__main__':
    main()

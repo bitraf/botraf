@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ x`whoami` != xpingbot ]; then
+  echo "Run sudo -u pingbot ~pingbot/pyngelyng/startbot"
+  exit 1
+fi
+
+exec ~pingbot/pyngelyng/pyngelyng.py --daemon

@@ -67,7 +67,7 @@ def command(sender, nick, text):
    else:
      file = text
 
-   url = prefix + file + ".cgi?" + urllib.urlencode({'nick': nick, 
+   url = prefix + file + "?" + urllib.urlencode({'nick': nick, 
 'params': params})
    try:
      connection = urllib.urlopen(url)

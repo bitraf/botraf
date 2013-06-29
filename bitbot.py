@@ -20,7 +20,7 @@ import ircbot, rpcgw
 import urllib, sys # XXX
 
 debug = False
-nickname = 'bitbot'
+nickname = 'botraf'
 channel = '#bitraf'
 prefix = "http://bitbot.bitraf.no/"
 server_host = 'irc.freenode.net'
